@@ -5,7 +5,8 @@
 - bcftools;
 - vcftools.
 <details>
-<summary>Установленные библиотеки</summary>     
+<summary>Установленные библиотеки</summary>    
+ 
 - autoconf 
 - automake 
 - make 
