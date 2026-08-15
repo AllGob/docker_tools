@@ -8,6 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     automake \
     make \
     gcc \
+    bzip2 \
     perl \
     zlib1g-dev \
     libbz2-dev \
