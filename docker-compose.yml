@@ -1,0 +1,25 @@
+services:
+  bioprogrammer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bioprogrammer:test
+    container_name: bioprogrammer_test
+    volumes:
+      - ./testdata:/data
+    working_dir: /data
+    command: >
+      bash -c "
+      echo '--- bgzip ---' && bgzip --version &&
+      echo '--- tabix ---' && tabix --version &&
+      echo '--- htsfile ---' && htsfile --version &&
+      echo '--- samtools ---' && samtools --version &&
+      echo '--- bcftools ---' && bcftools --version &&
+      echo '--- vcftools ---' && vcftools --version
+      "
+
+  shell:
+    extends: bioprogrammer
+    command: bash
+    stdin_open: true
+    tty: true
