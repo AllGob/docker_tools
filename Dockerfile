@@ -6,6 +6,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y \
     python3 \
     g++ \
+    pkg-config \
     libncurses-dev \
     autoconf \
     automake \
