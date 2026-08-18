@@ -5,6 +5,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get install -y \
     python3 \
+    libncurses5-dev \
     autoconf \
     automake \
     make \
