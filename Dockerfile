@@ -4,6 +4,7 @@ ENV SOFT="/soft"
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get install -y \
+    python3 \
     autoconf \
     automake \
     make \
