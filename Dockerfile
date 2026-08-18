@@ -39,7 +39,7 @@ RUN wget -q https://github.com/samtools/htslib/releases/download/${HTSLIB_VERSIO
 #В этой библиотеке три бинарника, поэтому в переменной окружения добавляю их + сам путь до библиотеки. 
 ENV PATH="$SOFT/htslib-${HTSLIB_VERSION}/bin:${PATH}" \
     LD_LIBRARY_PATH="$SOFT/htslib-${HTSLIB_VERSION}/lib:${LD_LIBRARY_PATH}" \
-    BGZIP="$SOFT/htslib-${HTSLIB_VERSION}/bin/bgzip" \B
+    BGZIP="$SOFT/htslib-${HTSLIB_VERSION}/bin/bgzip" \
     TABIX="$SOFT/htslib-${HTSLIB_VERSION}/bin/tabix" \
     HTSFILE="$SOFT/htslib-${HTSLIB_VERSION}/bin/htsfile"
 
