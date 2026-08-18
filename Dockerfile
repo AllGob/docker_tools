@@ -5,6 +5,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get install -y \
     python3 \
+    g++ \
     libncurses-dev \
     autoconf \
     automake \
@@ -82,3 +83,4 @@ RUN wget -q https://github.com/vcftools/vcftools/releases/download/v${VCFTOOLS_V
 
 ENV PATH="$SOFT/vcftools-${VCFTOOLS_VERSION}/bin:${PATH}" \
     VCFTOOLS="$SOFT/vcftools-${VCFTOOLS_VERSION}/bin/vcftools" 
+WORKDIR /data
